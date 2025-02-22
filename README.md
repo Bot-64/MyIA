@@ -1,5 +1,5 @@
 # MyIA
-My IB Internal Assessment written for IB Computer Science SL in my senior year of high school 2024-25
+My IB Internal Assessment written for IB Computer Science SL in my senior year of high school 2024-25.
 
 # Title Page
 International Baccalaurette - Diploma Programme  
