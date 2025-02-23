@@ -76,45 +76,45 @@ Includes 2 Tabs:
 1. Balance Sheet
 
 **Figure 1: Main Tab.**  
-[ADD FIGURE]
+![figure1](https://github.com/user-attachments/assets/e2afbe8d-e809-4fd4-bca3-5e3f7595518e)
 
 **Figure 2: “Add Row” button clicked, inserts row in table to input type of “Asset”, “Liability”, “Amount ($)”, and “Date”.**  
-[ADD FIGURE]
+![figure2](https://github.com/user-attachments/assets/4fdf40e6-333b-40c8-995b-b69de740062c)
 
 **Figure 3: “Assets” dropdown menu.**  
-[ADD FIGURE]
+![figure3](https://github.com/user-attachments/assets/048c2f3b-44bc-4df2-9954-afbaaa053b43)
 
 **Figure 4: “Liabilities” dropdown menu.**  
-[ADD FIGURE]  
+![figure4](https://github.com/user-attachments/assets/518650d8-cee9-49f4-8e11-94aa2597694a)  
 *Figures 3 & 4 implement scroll panels, the last option not shown is “Other”.
 
 **Figure 5: “Delete Row” button, confirmation, and error message.**
 If a row is selected prior to interaction with the “Delete Row” button the message below will display.  
-[ADD FIGURE]  
+![5a](https://github.com/user-attachments/assets/6dd441b0-09fb-4c63-ac58-231d0ad8cbdf)  
 If a row is not selected prior to interaction with the “Delete Row” button the error message below will display.  
-[ADD FIGURE]
+![5b](https://github.com/user-attachments/assets/0a412a20-0ae7-4fb8-88dc-f975b7426367)
 
 **Figure 6: “Calculate Net Worth” button.**  
-[ADD FIGURE]
+![6](https://github.com/user-attachments/assets/53edc16a-25eb-438f-b7b9-c2982fbabf9b)
 
 2. Compound Interest
 
 **Figure 7: Main Tab with example shown after “Calculate Interest” button has been interacted with.**  
-[ADD FIGURE]
+![7](https://github.com/user-attachments/assets/ccda07ea-7afe-4607-8075-88f1c8446274)
 
 ### Program Organization UML
 Made using http://www.lucidchart.com  
 **Figure 8: UML Diagram.**  
-[ADD FIGURE]
+![8](https://github.com/user-attachments/assets/c34d1d78-05de-4967-b973-f8c2e9a56254)
 
 ### Program Flow Flowchart
 Balance Sheet Tab:
 **Figure 9: Balance sheet tab flowchart.**  
-[ADD FIGURE]
+![9](https://github.com/user-attachments/assets/fa90fb20-710b-41e4-b81f-7c82a5d3106c)
 
 Compound Interest Tab:
 **Figure 10: Compound interest tab flowchart.**  
-[ADD FIGURE]
+![10](https://github.com/user-attachments/assets/393a2326-bed5-4754-99b6-4bbb42f3fb70)
 
 ## Test Plan
 **Table 2: Test plan.**
@@ -148,7 +148,7 @@ This program incorporates two main classes and extends a third Abstract class in
   * All methods in this class are annotated with @Override because the class extends AbstractTableModel and overrides the same defined methods in that parent class.
 
 **Figure 11: isCellEditable method.**  
-[ADD FIGURE]
+![11](https://github.com/user-attachments/assets/9ae83cb2-a6cf-4a5f-a5d4-1a14d32456a5)
 
 **B. Arrays**  
 This program uses arrays to store fixed sets of data for the dropdown options in the GUI. These represent the options that the user has for the type of asset or liability. This is preferred over an ArrayList because it requires a fixed amount of options. Two examples are shown below:
@@ -157,12 +157,12 @@ This program uses arrays to store fixed sets of data for the dropdown options in
 * Although both variables are of type JComboBox, the String array (in the parenthesis) is passed to the JComboBox constructor.
 
 **Figure 12: assetOptions and liabilityOptions arrays.**  
-[ADD FIGURE]
+![12](https://github.com/user-attachments/assets/a8713ade-e659-441a-b081-951a756d7140)
 
 **C. ArrayLists**  
 The Table class uses an ArrayList to dynamically manage the amount of rows in the balance sheet tab. Allowing for flexibility in the addition and deletion of rows. Since each row is not a singular type it is considered an array of objects, thus initialized as ArrayList<Object[]>. The use of ArrayList is ideal for this use case as it allows the user to add or delete as many rows as they wish.  
 **Figure 13: data ArrayList in Table.java.**  
-[ADD FIGURE]  
+![13](https://github.com/user-attachments/assets/bfcf0da6-e9d1-426a-8c2a-129f4081874d)
 
 **D. Buttons and Event Handlers**  
 This program uses several JButton components to facilitate user interaction. These are objects inherited from the JSwing library that allow a user to complete a task. Some buttons used are:
@@ -173,7 +173,7 @@ This program uses several JButton components to facilitate user interaction. The
 
 Each button is associated with an ActionListener, implemented using a lambda expression for concise and readable code. These ActionListeners continuously “listen” for a user interaction to perform the task necessary. For example, the code for the ActionListener of the calculateNetWorthButton is shown below:  
 **Figure 14: calculateNetWorthButton ActionListener, with lambda expression.**  
-[ADD FIGURE]  
+![14](https://github.com/user-attachments/assets/37e9278d-73d6-45cf-9325-60194d9fd1c7)  
 * Lambda expression is denoted with the “->” symbol and works similarly to a method.
 * This snippet of code also uses an algorithm to compute the total net worth.
   1. It uses a for loop to parse through each row inputted.
@@ -186,30 +186,30 @@ Each button is associated with an ActionListener, implemented using a lambda exp
 **E. Error Handling and Confirmation Statements**  
 This program implements error handling techniques to ensure that it runs reliably without giving any runtime errors. One example of this is in preventing invalid calculations in the compound interest tab by checking if all user inputs are correctly inputted as double values. If this is the case the program will continue with the calculation, otherwise it will warn the user that there is incorrect inputs:  
 **Figure 15: calculateInterestButton ActionListener and error message.**  
-[ADD FIGURE]  
+![15](https://github.com/user-attachments/assets/c3fa70d9-ffe5-47dd-a294-a3ff65b8c913)
 
 **F. Confirmation Statements**  
 This program also implements confirmation messages to improve user experience and prevent the user from deleting a row of data by mistake. After the Delete Row Button is selected and if a row has also been selected the program will present the user with a popup confirming that they would like to delete the row. If there is no row selected prior to interaction with the button it will resort to error handling and display an error message:  
 **Figure 16: deleteRowButton ActionListener and error/confirmation message.**  
-[ADD FIGURE]  
+![16](https://github.com/user-attachments/assets/e1e4cf3c-9258-4206-8e13-cf59eb585518)
 
 **G. Nested if Statement**  
 Nested if statements are used in this program to enforce logical constraints to establish a certain task. For example, in the Table class the icCellEditable method ensures that either the “Assets” or “Liabilities” column is editable, but not both:  
 **Figure 17: isCellEditable method in Table.java.**
-[ADD FIGURE]  
+![17](https://github.com/user-attachments/assets/026cbe85-376f-47a8-9b57-e1c3703abc39)
 
 **H. GUI**  
 The GUI is designed using Java Swing components and adheres to a tab-based structure. It makes the user experience more intuitive and user-friendly. Key features of the GUI include:
 * Tabbed Layout: Separates functionalities into two tabs.
 * Interactive Table: Allows dynamic data entry and modification with dropdowns, scroll wheels, and editable cells.
-* Error Handling: Provides user feedback via popups for invalid inputs or actions, such as attempting to delete a row when none are selected.  
-The figure below shows the initialization of the entire frame, balance sheet tab, and table.
+* Error Handling: Provides user feedback via popups for invalid inputs or actions, such as attempting to delete a row when none are selected.
 
+The figure below shows the initialization of the entire frame, balance sheet tab, and table.  
 **Figure 18: Initialization of frame.**  
-[ADD FIGURE]  
+![18](https://github.com/user-attachments/assets/0a0f70a4-a6b7-4f6e-af2d-100dd42cd3e9)  
 The figure below shows the addition of all buttons and fields in the compound interest tab to the tab itself. Finally the runner file ends with the statement frame.setVisible(true) allowing the user to see all JObjects added to the frame.  
 **Figure 19: Addition of all buttons to panel and frame visibility.**
-[ADD FIGURE]
+![19](https://github.com/user-attachments/assets/ad7a7184-4aa4-4562-9232-4a3d7d2f199c)
 
 ## Works Cited
 * Java Code Junkie (no date) JButton | Java Swing Tutorial for Beginners, YouTube. Available at: https://www.youtube.com/watch?v=QvFQFmzRqoo [Accessed: 26 December 2024].
